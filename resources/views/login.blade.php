@@ -27,7 +27,7 @@
                         </form>
                     </div>
                     <p class="has-text-primary">
-                        <a href="#">회원가입</a> &nbsp;·&nbsp;
+                        <a href="{{ route('signup') }}">회원가입</a> &nbsp;·&nbsp;
                         <a href="#">비밀번호 찾기</a>
                     </p>
                 </div>

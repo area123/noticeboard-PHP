@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="buttons">
-                    <a href="#" class="button is-primary is-outlined">
+                    <a href="{{ route('signup') }}" class="button is-primary is-outlined">
                         <strong>회원가입</strong>
                     </a>
                     <a href="{{ route('login') }}" class="button is-primary is-outlined">
