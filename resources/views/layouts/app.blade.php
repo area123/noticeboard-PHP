@@ -46,7 +46,7 @@
                     <a href="#" class="button is-primary is-outlined">
                         <strong>회원가입</strong>
                     </a>
-                    <a href="#" class="button is-primary is-outlined">
+                    <a href="{{ route('login') }}" class="button is-primary is-outlined">
                         <strong>로그인</strong>
                     </a>
                 </div>
