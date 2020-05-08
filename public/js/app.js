@@ -19328,15 +19328,27 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
+/***/ "./resources/sass/index.sass":
+/*!***********************************!*\
+  !*** ./resources/sass/index.sass ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.sass ***!
-  \*************************************************************/
+/*!*****************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.sass ./resources/sass/index.sass ***!
+  \*****************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\Users\kjs07\PhpstormProjects\noticeboard-PHP\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\kjs07\PhpstormProjects\noticeboard-PHP\resources\sass\app.sass */"./resources/sass/app.sass");
+__webpack_require__(/*! C:\Users\kjs07\PhpstormProjects\noticeboard-PHP\resources\sass\app.sass */"./resources/sass/app.sass");
+module.exports = __webpack_require__(/*! C:\Users\kjs07\PhpstormProjects\noticeboard-PHP\resources\sass\index.sass */"./resources/sass/index.sass");
 
 
 /***/ })

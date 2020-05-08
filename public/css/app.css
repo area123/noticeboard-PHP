@@ -12006,3 +12006,17 @@ label.panel-block:hover {
   padding: 3rem 1.5rem 6rem;
 }
 
+.navbar-brand a {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.navbar-brand a a:hover {
+  color: #FC5BB6;
+}
+
+.navbar-start a:hover {
+  border-bottom: 0.1em solid #FC5BB6;
+  color: #FC5BB6;
+}
+

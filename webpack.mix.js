@@ -12,7 +12,8 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.sass', 'public/css');
+    .sass('resources/sass/app.sass', 'public/css')
+    .sass('resources/sass/index.sass', 'public/css');
 
 mix.copy('node_modules/ionicons', 'public/js/ionicons');
 
