@@ -18,3 +18,10 @@ Route::view('/', 'index')->name('home');
 Route::view('/login', 'login')->name('login');
 
 Route::view('/signup', 'signup')->name('signup');
+
+Route::group(['middleware' => ['web']], function () {
+    Route::post('/api/signup', 'Auth\RegisterController@register');
+    Route::get('/api/signup', 'Auth\RegisterController@showRegistrationForm')->name('api.signup');
+    Route::post('/api/login', 'Auth\LoginController@login')->name('api.login');
+    Route::get('/api/logout', 'Auth\LoginController@logout')->name('api.logout');
+});

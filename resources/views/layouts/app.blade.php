@@ -42,14 +42,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="buttons">
-                    <a href="{{ route('signup') }}" class="button is-primary is-outlined">
-                        <strong>회원가입</strong>
-                    </a>
-                    <a href="{{ route('login') }}" class="button is-primary is-outlined">
-                        <strong>로그인</strong>
-                    </a>
-                </div>
+                @auth
+                    <div class="buttons">
+                        <a class="button is-primary is-outlined" href="{{ route('api.logout') }}">
+                            <strong>로그아웃</strong>
+                        </a>
+                    </div>
+                @else
+                    <div class="buttons">
+                        <a href="{{ route('signup') }}" class="button is-primary is-outlined">
+                            <strong>회원가입</strong>
+                        </a>
+                        <a href="{{ route('login') }}" class="button is-primary is-outlined">
+                            <strong>로그인</strong>
+                        </a>
+                    </div>
+                @endauth
             </div>
         </div>
     </nav>
