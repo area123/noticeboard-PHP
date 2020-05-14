@@ -7,13 +7,14 @@
     <title>Laravel</title>
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <script src="{{ asset('js/app.js') }}"></script>
     @yield('lib')
 </head>
 <body>
     <nav class="navbar" role="navigation">
         <div class="navbar-brand">
             <a href="{{ route('home') }}" class="navbar-item">Blog</a>
-            <a role="button" class="navbar-burger burger" data-target="navbarItem">
+            <a role="button" class="navbar-burger burger" data-target="navbarItem" aria-label="menu" aria-expanded="false">
                 @for($i=0; $i<4; $i++)
                     <span aria-hidden="true"></span>
                 @endfor
