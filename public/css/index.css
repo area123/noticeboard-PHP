@@ -15,3 +15,11 @@ header a p {
   margin-right: 1.5rem;
 }
 
+div.column.card {
+  margin-right: 1.5rem;
+}
+
+div.columns :nth-of-type(4n) {
+  margin-right: 0;
+}
+
