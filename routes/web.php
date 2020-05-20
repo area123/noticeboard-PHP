@@ -19,6 +19,8 @@ Route::view('/login', 'login')->name('login');
 
 Route::view('/signup', 'signup')->name('signup');
 
+Route::get('/{post}', 'HomeController@post')->name('post');
+
 Route::group(['middleware' => ['web']], function () {
     Route::post('/api/signup', 'Auth\RegisterController@register');
     Route::get('/api/signup', 'Auth\RegisterController@showRegistrationForm')->name('api.signup');
