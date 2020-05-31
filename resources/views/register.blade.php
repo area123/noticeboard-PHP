@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('lib')
-
+    <script src="{{ asset('js/register.js') }}"></script>
 @endsection
 
 @section('content')
@@ -19,10 +19,10 @@
                             <div class="field-body">
                                 <div class="field has-addons">
                                     <p class="control is-expanded">
-                                        <input class="input is-primary" name="email" type="email" placeholder="아이디" required>
+                                        <input id="email" class="input is-primary" name="email" type="email" placeholder="아이디" required>
                                     </p>
                                     <div class="control">
-                                        <button class="button is-primary is-outlined">아이디 확인</button>
+                                        <button id="check" class="button is-primary is-outlined" type="button">아이디 확인</button>
                                     </div>
                                 </div>
                             </div>
@@ -51,9 +51,27 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="button is-primary is-large is-fullwidth is-outlined">회원가입</button>
+                        <button type="submit" class="button is-primary is-large is-fullwidth is-outlined">회원가입</button>
                     </form>
                 </div>
+            </div>
+        </div>
+        <div class="modal" id="email_check_success">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <div class="box">
+                    <p>사용가능한 이메일 입니다.</p>
+                </div>
+                <button class="modal-close is-large" aria-label="close"></button>
+            </div>
+        </div>
+        <div class="modal" id="email_check_failed">
+            <div class="modal-background"></div>
+            <div class="modal-content">
+                <div class="box">
+                    <p>중복되는 이메일 입니다.</p>
+                </div>
+                <button class="modal-close is-large" aria-label="close"></button>
             </div>
         </div>
     </section>

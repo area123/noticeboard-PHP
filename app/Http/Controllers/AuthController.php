@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -38,5 +39,19 @@ class AuthController extends Controller
         Auth::logout();
 
         return view('index');
+    }
+
+    function check(Request $request)
+    {
+        try {
+            $user = User::where('email',$request->email)->firstOrFail();
+            return response()->json([
+                'success'=> false
+            ]);
+        } catch (ModelNotFoundException $e) {
+            return response()->json([
+                'success'=> true
+            ]);
+        }
     }
 }
