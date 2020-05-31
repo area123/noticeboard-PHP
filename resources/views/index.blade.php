@@ -7,7 +7,7 @@
 
 @section('content')
     <div class="columns mb-3">
-        @for($i=0; $i<3; $i++)
+        @foreach($posts as $post)
             <div class="column card mr-3">
                 <div class="card-image">
                     <figure class="image is-4by3">
@@ -22,33 +22,13 @@
                             </figure>
                         </div>
                         <div class="media-content">
-                            <p class="title is-4">유저 아이디</p>
-                            <p class="subtitle is-6">생성시간과 댓글 갯수</p>
+                            <p class="title is-4">{{ $post->email }}</p>
+                            <p class="subtitle is-6">{{ $post->created_at }}</p>
                         </div>
                     </div>
                 </div>
             </div>
-        @endfor
-        <div class="column card">
-            <div class="card-image">
-                <figure class="image is-4by3">
-                    <img src="https://bulma.io/images/placeholders/1280x960.png" alt="썸네일">
-                </figure>
-            </div>
-            <div class="card-content">
-                <div class="media">
-                    <div class="media-left">
-                        <figure class="image is-48x48">
-                            <img src="https://bulma.io/images/placeholders/96x96.png" alt="유저 썸네일">
-                        </figure>
-                    </div>
-                    <div class="media-content">
-                        <p class="title is-4">유저 아이디</p>
-                        <p class="subtitle is-6">생성시간과 댓글 갯수</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @endforeach
     </div>
     <div class="columns">
         <div class="column card">
@@ -61,9 +41,9 @@
             </header>
             <div class="card-content">
                 <ul>
-                    @for ($i=0; $i<15; $i++)
-                        <li>test</li>
-                    @endfor
+                    @foreach ($notices as $notice)
+                        <li>{{ $notice->title }}</li>
+                    @endforeach
                 </ul>
             </div>
         </div>
@@ -77,9 +57,9 @@
             </header>
             <div class="card-content">
                 <ul>
-                    @for ($i=0; $i<15; $i++)
-                        <li>test</li>
-                    @endfor
+                    @foreach ($frees as $free)
+                        <li>{{ $free->title }}</li>
+                    @endforeach
                 </ul>
             </div>
         </div>
@@ -93,9 +73,9 @@
             </header>
             <div class="card-content">
                 <ul>
-                    @for ($i=0; $i<15; $i++)
-                        <li>test</li>
-                    @endfor
+                    @foreach ($programmings as $programming)
+                        <li>{{ $programming->title }}</li>
+                    @endforeach
                 </ul>
             </div>
         </div>
@@ -109,9 +89,9 @@
             </header>
             <div class="card-content">
                 <ul>
-                    @for ($i=0; $i<15; $i++)
-                        <li>test</li>
-                    @endfor
+                    @foreach ($games as $game)
+                        <li>{{ $game->title }}</li>
+                    @endforeach
                 </ul>
             </div>
         </div>
