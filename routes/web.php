@@ -18,3 +18,5 @@ Route::get('/', 'PostController@index')->name('home');
 Route::view('/login', 'login')->name('login');
 
 Route::view('/register', 'register')->name('register');
+
+Route::get('/{post}', 'PostController@show')->name('post');

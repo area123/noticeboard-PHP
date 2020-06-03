@@ -22,4 +22,14 @@ class PostController extends Controller
             'games' => $games
         ]);
     }
+
+    function show($post)
+    {
+        $posts = Post::where('sort', $post)->latest()->take(20)->get();
+
+        return view('post', [
+            'post' => $post,
+            'posts' => $posts
+        ]);
+    }
 }
