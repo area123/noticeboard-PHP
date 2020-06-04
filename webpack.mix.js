@@ -15,8 +15,9 @@ mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/register.js','public/js')
     .sass('resources/sass/app.sass', 'public/css')
     .sass('resources/sass/index.sass', 'public/css')
-    .sass('resources/sass/login.sass', 'public/css');
+    .sass('resources/sass/write.sass', 'public/css');
 
 mix.copy('node_modules/ionicons', 'public/js/ionicons');
+mix.copy('node_modules/normalize.css/normalize.css', 'public/css');
 
 

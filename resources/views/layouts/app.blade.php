@@ -6,6 +6,7 @@
 
     <title>Laravel</title>
 
+    <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script src="{{ asset('js/app.js') }}"></script>
     @yield('lib')
@@ -43,7 +44,7 @@
                         </div>
                     </div>
                 </div>
-                @if(\Illuminate\Support\Facades\Auth::check())
+                @if(Auth::check())
                     <div class="buttons">
                         <a href="{{ route('register') }}" class="button is-primary is-outlined">
                             <strong>{{ $name }}</strong>

@@ -1,11 +1,7 @@
 @extends('layouts.app')
 
-@section('lib')
-    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
-@endsection
-
 @section('content')
-    <section class="hero is-fullheight">
+    <section class="hero is-fullheight-with-navbar">
         <div class="hero-body">
             <div class="container has-text-centered">
                 <div class="column is-4 is-offset-4">

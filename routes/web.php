@@ -13,10 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PostController@index')->name('home');
+Route::get('/', 'PostController@index')->name('home')->middleware('web');
 
 Route::view('/login', 'login')->name('login');
 
 Route::view('/register', 'register')->name('register');
+
+Route::view('/write', 'write')->name('write');
 
 Route::get('/{post}', 'PostController@show')->name('post');

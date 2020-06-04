@@ -21,6 +21,7 @@
     },
     "dependencies": {
         "bulma": "^0.8.2",
-        "ionicons": "^5.0.1"
+        "ionicons": "^5.0.1",
+        "normalize.css": "^8.0.1"
     }
 }

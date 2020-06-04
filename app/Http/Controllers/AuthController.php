@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
 use App\User;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Http\Request;
@@ -25,20 +26,18 @@ class AuthController extends Controller
     {
         $user = $request->only('email', 'password');
 
-        User::where('email', $request->email)->first();
-
         if (Auth::attempt($user)) {
-            return view('index',[
-                'name'=>User::where('email', $request->email)->first()->name
-            ]);
+            return redirect()->route('home');
         }
+
+        return redirect()->route('login');
     }
 
     function logout()
     {
         Auth::logout();
 
-        return view('index');
+        return redirect()->route('home');
     }
 
     function check(Request $request)

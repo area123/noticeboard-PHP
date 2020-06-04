@@ -1,0 +1,20 @@
+.field:not(:last-child)
+        margin-bottom: 0 !important
+
+.textarea
+    padding: 0 !important
+    border-bottom: none !important
+
+div.is-expanded > input.input
+    border-bottom: none !important
+
+div.control > textarea.textarea
+    border-bottom: none !important
+    height: calc(100vh - 3.25rem - 2.5rem - 2.5rem)
+
+.select
+    > select
+        border-bottom: none !important
+
+div.control > textarea.textarea:not([rows])
+    max-height: none
