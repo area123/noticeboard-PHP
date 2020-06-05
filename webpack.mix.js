@@ -19,5 +19,3 @@ mix.js('resources/js/app.js', 'public/js')
 
 mix.copy('node_modules/ionicons', 'public/js/ionicons');
 mix.copy('node_modules/normalize.css/normalize.css', 'public/css');
-
-

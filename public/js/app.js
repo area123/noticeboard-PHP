@@ -19281,22 +19281,19 @@ module.exports = function(module) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+/**
+ * First we will load all of this project's JavaScript dependencies which
+ * includes Vue and other libraries. It is a great starting point when
+ * building robust, powerful web applications using Vue and Laravel.
+ */
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
-document.addEventListener('DOMContentLoaded', function () {
-  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-  if ($navbarBurgers.length > 0) {
-    $navbarBurgers.forEach(function (el) {
-      el.addEventListener('click', function () {
-        var target = el.dataset.target;
-        var $target = document.getElementById(target);
-        el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
-      });
-    });
-  }
-});
+window.onload = function () {
+  document.getElementById('logout').addEventListener('click', function (e) {
+    e.preventDefault();
+    document.getElementById('logout-form').submit();
+  });
+};
 
 /***/ }),
 
@@ -19308,6 +19305,12 @@ document.addEventListener('DOMContentLoaded', function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/**
+ * We'll load jQuery and the Bootstrap jQuery plugin which provides support
+ * for JavaScript based Bootstrap features such as modals and tabs. This
+ * code may be modified to fit the specific needs of your application.
+ */
+
 /**
  * We'll load the axios HTTP library which allows us to easily issue requests
  * to our Laravel back-end. This library automatically handles sending the
@@ -19354,9 +19357,9 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ }),
 
-/***/ "./resources/sass/login.sass":
+/***/ "./resources/sass/write.sass":
 /*!***********************************!*\
-  !*** ./resources/sass/login.sass ***!
+  !*** ./resources/sass/write.sass ***!
   \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
@@ -19367,7 +19370,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 /***/ 0:
 /*!*********************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.sass ./resources/sass/index.sass ./resources/sass/login.sass ***!
+  !*** multi ./resources/js/app.js ./resources/sass/app.sass ./resources/sass/index.sass ./resources/sass/write.sass ***!
   \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -19375,7 +19378,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 __webpack_require__(/*! C:\Users\kjs07\PhpstormProjects\noticeboard-PHP\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! C:\Users\kjs07\PhpstormProjects\noticeboard-PHP\resources\sass\app.sass */"./resources/sass/app.sass");
 __webpack_require__(/*! C:\Users\kjs07\PhpstormProjects\noticeboard-PHP\resources\sass\index.sass */"./resources/sass/index.sass");
-module.exports = __webpack_require__(/*! C:\Users\kjs07\PhpstormProjects\noticeboard-PHP\resources\sass\login.sass */"./resources/sass/login.sass");
+module.exports = __webpack_require__(/*! C:\Users\kjs07\PhpstormProjects\noticeboard-PHP\resources\sass\write.sass */"./resources/sass/write.sass");
 
 
 /***/ })

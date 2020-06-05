@@ -1,15 +1,14 @@
+/**
+ * First we will load all of this project's JavaScript dependencies which
+ * includes Vue and other libraries. It is a great starting point when
+ * building robust, powerful web applications using Vue and Laravel.
+ */
+
 require('./bootstrap');
 
-document.addEventListener('DOMContentLoaded', () => {
-    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-    if ($navbarBurgers.length > 0) {
-        $navbarBurgers.forEach( el => {
-            el.addEventListener('click', () => {
-                const target = el.dataset.target;
-                const $target = document.getElementById(target);
-                el.classList.toggle('is-active');
-                $target.classList.toggle('is-active');
-            });
-        });
-    }
-});
+window.onload = () => {
+    document.getElementById('logout').addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('logout-form').submit();
+    });
+}

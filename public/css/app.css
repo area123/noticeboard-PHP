@@ -12020,3 +12020,7 @@ label.panel-block:hover {
   color: #FC5BB6;
 }
 
+#logout-form {
+  display: none;
+}
+

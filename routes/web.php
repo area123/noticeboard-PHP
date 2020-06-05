@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PostController@index')->name('home')->middleware('web');
+Route::get('/', 'PostController@index')->name('home');
 
 Route::view('/login', 'login')->name('login');
 
@@ -22,3 +22,9 @@ Route::view('/register', 'register')->name('register');
 Route::view('/write', 'write')->name('write');
 
 Route::get('/{post}', 'PostController@show')->name('post');
+
+Route::get('/user/login', 'Auth\LoginController@showLoginForm')->name('user.login');
+
+Route::post('/user/login', 'Auth\LoginController@login');
+
+Route::post('/user/logout', 'Auth\LoginController@logout')->name('user.logout');

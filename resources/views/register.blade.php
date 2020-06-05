@@ -9,7 +9,7 @@
         <div class="hero-body">
             <div class="container">
                 <div class="box">
-                    <form method="post" action="{{ route('api.register') }}">
+                    <form method="post" action="#">
                         @csrf
                         <h3 class="title has-text-black has-text-centered">회원가입</h3>
                         <div class="field is-horizontal">

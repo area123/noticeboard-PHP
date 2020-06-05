@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script src="{{ asset('js/app.js') }}"></script>
+    <script>
+
+    </script>
     @yield('lib')
 </head>
 <body>
@@ -46,12 +49,16 @@
                 </div>
                 @if(Auth::check())
                     <div class="buttons">
-                        <a href="{{ route('register') }}" class="button is-primary is-outlined">
-                            <strong>{{ $name }}</strong>
+                        <a href="#" class="button is-primary is-outlined">
+                            <strong>{{ Auth::user()->name }}</strong>
                         </a>
-                        <a href="{{ route('api.logout') }}" class="button is-primary is-outlined">
+                        <a id="logout" href="{{ route('user.logout') }}" class="button is-primary is-outlined">
                             <strong>로그아웃</strong>
                         </a>
+
+                        <form id="logout-form" action="{{ route('user.logout') }}" method="post">
+                            @csrf
+                        </form>
                     </div>
                 @else
                     <div class="buttons">

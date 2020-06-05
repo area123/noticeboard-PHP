@@ -6,7 +6,7 @@
             <div class="container has-text-centered">
                 <div class="column is-4 is-offset-4">
                     <div class="box">
-                        <form method="post" action="{{ route('api.login') }}">
+                        <form method="post" action="{{ route('user.login') }}">
                             @csrf
                             <h3 class="title has-text-black">로그인</h3>
                             <div class="field">
