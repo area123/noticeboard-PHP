@@ -9,7 +9,7 @@
         <div class="hero-body">
             <div class="container">
                 <div class="box">
-                    <form method="post" action="#">
+                    <form method="post" action="{{ route('user.register') }}">
                         @csrf
                         <h3 class="title has-text-black has-text-centered">회원가입</h3>
                         <div class="field is-horizontal">

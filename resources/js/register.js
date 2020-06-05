@@ -9,7 +9,7 @@ window.onload = function () {
             .classList.remove('is-active');
     });
     document.getElementById('check').addEventListener('click', function () {
-        axios.get('/api/check', {
+        axios.get('/api/user/check', {
             params: {
                 email: document.getElementById('email').value
             }
