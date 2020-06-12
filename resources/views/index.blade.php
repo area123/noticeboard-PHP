@@ -42,7 +42,11 @@
             <div class="card-content">
                 <ul>
                     @foreach ($notices as $notice)
-                        <li>{{ $notice->title }}</li>
+                        <li>
+                            <a class="has-text-black" href="{{ route('post',$notice->id) }}">
+                                {{ $notice->title }}
+                            </a>
+                        </li>
                     @endforeach
                 </ul>
             </div>
@@ -58,7 +62,11 @@
             <div class="card-content">
                 <ul>
                     @foreach ($frees as $free)
-                        <li>{{ $free->title }}</li>
+                        <li>
+                            <a class="has-text-black" href="{{ route('post',$free->id) }}">
+                                {{ $free->title }}
+                            </a>
+                        </li>
                     @endforeach
                 </ul>
             </div>
@@ -74,7 +82,11 @@
             <div class="card-content">
                 <ul>
                     @foreach ($programmings as $programming)
-                        <li>{{ $programming->title }}</li>
+                        <li>
+                            <a class="has-text-black" href="{{ route('post',$programming->id) }}">
+                                {{ $programming->title }}
+                            </a>
+                        </li>
                     @endforeach
                 </ul>
             </div>
@@ -90,7 +102,11 @@
             <div class="card-content">
                 <ul>
                     @foreach ($games as $game)
-                        <li>{{ $game->title }}</li>
+                        <li>
+                            <a class="has-text-black" href="{{ route('post',$game->id) }}">
+                                {{ $game->title }}
+                            </a>
+                        </li>
                     @endforeach
                 </ul>
             </div>

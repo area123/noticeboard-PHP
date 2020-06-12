@@ -3,12 +3,18 @@
 namespace App\Http\Controllers;
 
 use App\Post;
-use App\User;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
-class PostController extends Controller
+class IndexController extends Controller
 {
-    function index()
+    /**
+     * Handle the incoming request.
+     *
+     * @param Request $request
+     * @return View
+     */
+    public function __invoke(Request $request)
     {
         $posts = Post::latest()->take(4)->get();
         $notices = Post::where('sort', '공지사항')->take(15)->get();
@@ -21,16 +27,6 @@ class PostController extends Controller
             'frees' => $frees,
             'programmings' => $programmings,
             'games' => $games
-        ]);
-    }
-
-    function show($post)
-    {
-        $posts = Post::where('sort', $post)->latest()->take(20)->get();
-
-        return view('post', [
-            'post' => $post,
-            'posts' => $posts
         ]);
     }
 }

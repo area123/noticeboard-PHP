@@ -14,7 +14,7 @@
             @foreach($posts as $post)
                 <tr>
                     <td>{{ $post->id }}</td>
-                    <td>{{ $post->title }}</td>
+                    <td><a class="has-text-black" href="{{ route('post',$post->id) }}">{{ $post->title }}</a></td>
                     <td>{{ $post->email }}</td>
                     <td>{{ $post->created_at }}</td>
                 </tr>

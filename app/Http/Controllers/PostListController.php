@@ -17,7 +17,7 @@ class PostListController extends Controller
     {
         $posts = Post::where('sort', $post)->latest()->take(20)->get();
 
-        return view('post', [
+        return view('postlist', [
             'post' => $post,
             'posts' => $posts
         ]);
