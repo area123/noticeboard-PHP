@@ -2,7 +2,10 @@
 
 namespace App;
 
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Carbon;
 
 /**
  * App\Post
@@ -12,20 +15,20 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $title
  * @property string $sort
  * @property string $content
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \App\User $user
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Post newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Post newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Post query()
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Post whereContent($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Post whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Post whereEmail($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Post whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Post whereSort($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Post whereTitle($value)
- * @method static \Illuminate\Database\Eloquent\Builder|\App\Post whereUpdatedAt($value)
- * @mixin \Eloquent
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
+ * @property-read User $user
+ * @method static Builder|Post newModelQuery()
+ * @method static Builder|Post newQuery()
+ * @method static Builder|Post query()
+ * @method static Builder|Post whereContent($value)
+ * @method static Builder|Post whereCreatedAt($value)
+ * @method static Builder|Post whereEmail($value)
+ * @method static Builder|Post whereId($value)
+ * @method static Builder|Post whereSort($value)
+ * @method static Builder|Post whereTitle($value)
+ * @method static Builder|Post whereUpdatedAt($value)
+ * @mixin Eloquent
  */
 class Post extends Model
 {

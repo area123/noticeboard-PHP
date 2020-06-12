@@ -33,7 +33,7 @@
     <div class="columns">
         <div class="column card">
             <header class="card-header">
-                <a href="{{ route('post', '공지사항') }}">
+                <a href="{{ route('post.list', '공지사항') }}">
                     <p class="card-header-title">
                         공지사항
                     </p>
@@ -49,7 +49,7 @@
         </div>
         <div class="column card">
             <header class="card-header">
-                <a href="{{ route('post', '자유게시판') }}">
+                <a href="{{ route('post.list', '자유게시판') }}">
                     <p class="card-header-title">
                         자유게시판
                     </p>
@@ -65,7 +65,7 @@
         </div>
         <div class="column card">
             <header class="card-header">
-                <a href="{{ route('post', '프로그래밍') }}">
+                <a href="{{ route('post.list', '프로그래밍') }}">
                     <p class="card-header-title">
                         프로그래밍
                     </p>
@@ -81,7 +81,7 @@
         </div>
         <div class="column card">
             <header class="card-header">
-                <a href="{{ route('post', '게임') }}">
+                <a href="{{ route('post.list', '게임') }}">
                     <p class="card-header-title">
                         게임
                     </p>

@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('', 'PostController@index')->name('home');
+Route::get('', 'IndexController')->name('home');
 
 Route::view('login', 'login')->name('login');
 
@@ -21,7 +21,7 @@ Route::view('register', 'register')->name('register');
 
 Route::view('write', 'write')->name('write');
 
-Route::get('{post}', 'PostController@show')->name('post');
+Route::get('{post}/list', 'PostListController')->name('post.list');
 
 Route::get('user/login', 'Auth\LoginController@showLoginForm')->name('user.login');
 
