@@ -26,16 +26,16 @@
         </div>
         <div id="navbarItem" class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item" href="{{ route('post.list', '공지사항') }}">
+                <a class="navbar-item" href="{{ route('post.list', 'notice') }}">
                     공지사항
                 </a>
-                <a class="navbar-item" href="{{ route('post.list', '자유게시판') }}">
+                <a class="navbar-item" href="{{ route('post.list', 'free') }}">
                     자유게시판
                 </a>
-                <a class="navbar-item" href="{{ route('post.list', '프로그래밍') }}">
+                <a class="navbar-item" href="{{ route('post.list', 'programming') }}">
                     프로그래밍
                 </a>
-                <a class="navbar-item" href="{{ route('post.list', '게임') }}">
+                <a class="navbar-item" href="{{ route('post.list', 'game') }}">
                     게임
                 </a>
             </div>

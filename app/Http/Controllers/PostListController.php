@@ -15,10 +15,9 @@ class PostListController extends Controller
      */
     public function __invoke($post)
     {
-        $posts = Post::where('sort', $post)->latest()->take(20)->get();
-
+        $posts = Post::where('sort', $post)->paginate(20);
         return view('postlist', [
-            'post' => $post,
+            'title' => $post,
             'posts' => $posts
         ]);
     }

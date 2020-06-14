@@ -12,7 +12,7 @@ class PostSeeder extends Seeder
      */
     public function run()
     {
-        $sort = ["공지사항", "자유게시판", "프로그래밍", "게임"];
+        $sort = ["notice", "free", "programming", "game"];
         $content = <<<EOT
 # 마크다운 예제 1
 이 문서는 [마크다운][1]으로 썼습니다. 화면에는 HTML로 변환되어 출력됩니다.
@@ -20,10 +20,10 @@ class PostSeeder extends Seeder
 - 첫 번째 항목
 - 두 번째 항목[^1]
 [1]: http://daringfireball.net/projects/markdown
-[^1]: 두 번째 항목_ http://google.com 
+[^1]: 두 번째 항목_ http://google.com
 EOT;
-        for ($i = 0; $i <= 3; $i++) {
-            for ($j = 0; $j <= 19; $j++) {
+        for ($i = 0; $i < 4; $i++) {
+            for ($j = 0; $j < 200; $j++) {
                 $title = $j . ".번째 테스트 제목";
 
                 $post = new Post();

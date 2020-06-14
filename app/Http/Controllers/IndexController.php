@@ -17,10 +17,10 @@ class IndexController extends Controller
     public function __invoke(Request $request)
     {
         $posts = Post::latest()->take(4)->get();
-        $notices = Post::where('sort', '공지사항')->take(15)->get();
-        $frees = Post::where('sort', '자유게시판')->take(15)->get();
-        $programmings = Post::where('sort', '프로그래밍')->take(15)->get();
-        $games = Post::where('sort', '게임')->take(15)->get();
+        $notices = Post::where('sort', 'notice')->take(15)->get();
+        $frees = Post::where('sort', 'free')->take(15)->get();
+        $programmings = Post::where('sort', 'programming')->take(15)->get();
+        $games = Post::where('sort', 'game')->take(15)->get();
         return view('index',[
             'posts' => $posts,
             'notices' => $notices,
