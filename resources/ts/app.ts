@@ -1,11 +1,4 @@
 import "./bootstrap";
-import {AxiosInstance, AxiosResponse, AxiosError} from "axios";
-
-declare global {
-    interface Window {
-        axios: AxiosInstance;
-    }
-}
 
 window.onload = () => {
     const logoutBtn: HTMLAnchorElement = <HTMLAnchorElement>document.getElementById('logout');

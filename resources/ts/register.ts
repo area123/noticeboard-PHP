@@ -7,6 +7,14 @@ declare global {
 }
 
 window.onload = () => {
+    const logoutBtn: HTMLAnchorElement = <HTMLAnchorElement>document.getElementById('logout');
+    const logoutForm: HTMLFormElement = <HTMLFormElement>document.getElementById('logout-form');
+
+    logoutBtn.addEventListener('click', (e: MouseEvent) => {
+        e.preventDefault();
+        logoutForm.submit();
+    });
+
     const removeBtns: HTMLButtonElement[] = <HTMLButtonElement[]>Array.from(document.getElementsByClassName('modal-close'));
     const email_check_success_div: HTMLDivElement = <HTMLDivElement>document.getElementById('email_check_success');
     const email_check_failed_div: HTMLDivElement = <HTMLDivElement>document.getElementById('email_check_failed');
