@@ -19,3 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('user/check', 'Auth\LoginCheckController@check');
+
+Route::post('post', 'WriteController');

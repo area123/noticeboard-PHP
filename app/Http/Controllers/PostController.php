@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Post;
-use Illuminate\Http\Request;
 use cebe\markdown\Markdown;
 use Illuminate\View\View;
 

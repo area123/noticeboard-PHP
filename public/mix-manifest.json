@@ -4,5 +4,6 @@
     "/css/index.css": "/css/index.css",
     "/css/write.css": "/css/write.css",
     "/js/register.js": "/js/register.js",
+    "/js/write.js": "/js/write.js",
     "/css/normalize.css": "/css/normalize.css"
 }

@@ -19,7 +19,7 @@ Route::view('login', 'login')->name('login');
 
 Route::view('register', 'register')->name('register');
 
-Route::view('write', 'write')->name('write');
+Route::view('write', 'write')->name('write')->middleware('auth');
 
 Route::get('{post}', 'PostController')->name('post');
 

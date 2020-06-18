@@ -21,7 +21,7 @@ class IndexController extends Controller
         $frees = Post::where('sort', 'free')->take(15)->get();
         $programmings = Post::where('sort', 'programming')->take(15)->get();
         $games = Post::where('sort', 'game')->take(15)->get();
-        return view('index',[
+        return view('index', [
             'posts' => $posts,
             'notices' => $notices,
             'frees' => $frees,
