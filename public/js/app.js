@@ -2141,10 +2141,12 @@ __webpack_require__(/*! ./bootstrap */ "./resources/ts/bootstrap.ts");
 window.onload = function () {
     var logoutBtn = document.getElementById('logout');
     var logoutForm = document.getElementById('logout-form');
-    logoutBtn.addEventListener('click', function (e) {
-        e.preventDefault();
-        logoutForm.submit();
-    });
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            logoutForm.submit();
+        });
+    }
 };
 
 

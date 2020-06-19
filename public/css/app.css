@@ -12024,3 +12024,7 @@ label.panel-block:hover {
   display: none;
 }
 
+.buttons .button:last-child {
+  margin-right: 0.5rem;
+}
+

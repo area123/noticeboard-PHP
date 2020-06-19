@@ -7,8 +7,10 @@
 require('./bootstrap');
 
 window.onload = () => {
-    document.getElementById('logout').addEventListener('click', (e) => {
-        e.preventDefault();
-        document.getElementById('logout-form').submit();
-    });
+    if (document.getElementById('logout')) {
+        document.getElementById('logout').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('logout-form').submit();
+        });
+    }
 }
