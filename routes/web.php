@@ -13,13 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('', 'IndexController')->name('home');
+Route::get('', 'IndexController')->name('index');
 
 Route::view('login', 'login')->name('login');
 
 Route::view('register', 'register')->name('register');
 
 Route::view('write', 'write')->name('write')->middleware('auth');
+
+Route::view('dashboard', 'dashboard')->name('home');/*->middleware('auth');*/
 
 Route::get('{post}', 'PostController')->name('post');
 

@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('lib')
-    <script src="{{ asset('js/ionicons/dist/ionicons.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 @endsection
 
@@ -33,10 +32,8 @@
     <div class="columns">
         <div class="column card">
             <header class="card-header">
-                <a href="{{ route('post.list', 'notice') }}">
-                    <p class="card-header-title">
-                        공지사항
-                    </p>
+                <a class="card-header-title is-centered" href="{{ route('post.list', 'notice') }}">
+                    공지사항
                 </a>
             </header>
             <div class="card-content">
@@ -53,10 +50,8 @@
         </div>
         <div class="column card">
             <header class="card-header">
-                <a href="{{ route('post.list', 'free') }}">
-                    <p class="card-header-title">
-                        자유게시판
-                    </p>
+                <a class="card-header-title is-centered" href="{{ route('post.list', 'free') }}">
+                    자유게시판
                 </a>
             </header>
             <div class="card-content">
@@ -73,10 +68,8 @@
         </div>
         <div class="column card">
             <header class="card-header">
-                <a href="{{ route('post.list', 'programming') }}">
-                    <p class="card-header-title">
-                        프로그래밍
-                    </p>
+                <a class="card-header-title is-centered" href="{{ route('post.list', 'programming') }}">
+                    프로그래밍
                 </a>
             </header>
             <div class="card-content">
@@ -93,10 +86,8 @@
         </div>
         <div class="column card">
             <header class="card-header">
-                <a href="{{ route('post.list', 'game') }}">
-                    <p class="card-header-title">
-                        게임
-                    </p>
+                <a class="card-header-title is-centered" href="{{ route('post.list', 'game') }}">
+                    게임
                 </a>
             </header>
             <div class="card-content">
@@ -112,29 +103,4 @@
             </div>
         </div>
     </div>
-    <footer class="footer">
-        <div class="columns">
-            <div class="column has-text-centered">
-                <span class="icon is-large">
-                    <ion-icon name="phone-portrait-outline" size="large"></ion-icon>
-                </span>
-                <p class="has-text-centered">010-5744-4407</p>
-            </div>
-            <div class="column has-text-centered">
-                <span class="icon is-large">
-                    <ion-icon name="mail-outline" size="large"></ion-icon>
-                </span>
-                <p class="has-text-centered">kjs0713kjs@gmail.com</p>
-            </div>
-            <div class="column has-text-centered">
-                <span class="icon is-large">
-                    <ion-icon name="logo-github" size="large"></ion-icon>
-                </span>
-                <p class="has-text-centered">https://github.com/area123</p>
-            </div>
-        </div>
-        <p class="has-text-centered">
-            copyright&copy;2019-강해찬
-        </p>
-    </footer>
 @endsection

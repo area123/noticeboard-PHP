@@ -16,10 +16,11 @@ class PostController extends Controller
      */
     public function __invoke($id)
     {
-        $markdown = Post::where("id", $id)->first()->content;
+        $post = Post::where("id", $id)->first();
         $parser = new Markdown();
         return view('post', [
-            'content' => $parser->parse($markdown)
+            'post' => $post,
+            'content' => $parser->parse($post->content)
         ]);
     }
 }

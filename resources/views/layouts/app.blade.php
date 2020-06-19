@@ -9,15 +9,13 @@
     <link rel="stylesheet" href="{{ asset('css/normalize.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script src="{{ asset('js/app.js') }}"></script>
-    <script>
-
-    </script>
+    <script src="{{ asset('js/ionicons/dist/ionicons.js') }}"></script>
     @yield('lib')
 </head>
 <body>
     <nav class="navbar" role="navigation">
         <div class="navbar-brand">
-            <a href="{{ route('home') }}" class="navbar-item">Blog</a>
+            <a href="{{ route('index') }}" class="navbar-item">Blog</a>
             <a role="button" class="navbar-burger burger" data-target="navbarItem">
                 @for($i=0; $i<4; $i++)
                     <span aria-hidden="true"></span>
@@ -49,13 +47,12 @@
                 </div>
                 @if(Auth::check())
                     <div class="buttons">
-                        <a href="#" class="button is-primary is-outlined">
+                        <a href="{{ route('home') }}" class="button is-primary is-outlined">
                             <strong>{{ Auth::user()->name }}</strong>
                         </a>
                         <a id="logout" href="{{ route('user.logout') }}" class="button is-primary is-outlined">
                             <strong>로그아웃</strong>
                         </a>
-
                         <form id="logout-form" action="{{ route('user.logout') }}" method="post">
                             @csrf
                         </form>
@@ -74,5 +71,30 @@
         </div>
     </nav>
     @yield('content')
+    <footer class="footer">
+        <div class="columns">
+            <div class="column has-text-centered">
+                <span class="icon is-large">
+                    <ion-icon name="phone-portrait-outline" size="large"></ion-icon>
+                </span>
+                <p class="has-text-centered">010-5744-4407</p>
+            </div>
+            <div class="column has-text-centered">
+                <span class="icon is-large">
+                    <ion-icon name="mail-outline" size="large"></ion-icon>
+                </span>
+                <p class="has-text-centered">kjs0713kjs@gmail.com</p>
+            </div>
+            <div class="column has-text-centered">
+                <span class="icon is-large">
+                    <ion-icon name="logo-github" size="large"></ion-icon>
+                </span>
+                <p class="has-text-centered">https://github.com/area123</p>
+            </div>
+        </div>
+        <p class="has-text-centered">
+            copyright&copy;2019-강해찬
+        </p>
+    </footer>
 </body>
 </html>
