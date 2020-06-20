@@ -19,6 +19,9 @@ use Illuminate\Support\Carbon;
  * @property string $email
  * @property Carbon|null $email_verified_at
  * @property string $password
+ * @property string $thumbnail
+ * @property Carbon|null $birthday
+ * @property boolean|null $sex
  * @property string|null $remember_token
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at

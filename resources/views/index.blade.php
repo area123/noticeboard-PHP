@@ -17,7 +17,7 @@
                     <div class="media">
                         <div class="media-left">
                             <figure class="image is-48x48">
-                                <img src="https://bulma.io/images/placeholders/96x96.png" alt="유저 썸네일">
+                                <img src="{{ \App\User::where('email', $post->email)->first()->thumbnail }}" alt="유저 썸네일">
                             </figure>
                         </div>
                         <div class="media-content">
